@@ -38,8 +38,17 @@ XML), creating documentation (HTML and POD), and more. We also have
 the ability to talk directly to a database through DBI to query for
 the structures of several databases.
 
-# %description -l pl
-# TODO
+%description -l pl
+SQL::Translator to grupa modu³ów Perla obrabiaj±cych definicje danych
+struktur (g³ównie schematów baz danych) na ciekawe sposoby, takie jak
+konwersja miêdzy ró¿nymi dialektami sk³adni CREATE (np. MySQL do
+Oracle), wizualizacja schematów (diagramy pseudo-ER, GraphViz i
+GD), automatyczne generowanie kodu (przy u¿yciu Class::DBI), konwersja
+plików nie bêd±cych relacyjnymi bazami danych do schematów SQL (pliki
+tekstowe xSV, arkusze Excela), serializacja przetworzonych schematów
+(poprzez Storable, YAML i XML), tworzenie dokumentacji (HTML i POD)
+itd. Istnieje tak¿e mo¿liwo¶æ bezpo¶redniej komunikacji z baz± danych
+poprzez DBI w celu odpytania o struktury ró¿nych baz.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
