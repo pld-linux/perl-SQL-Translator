@@ -6,7 +6,7 @@
 %define	pdir	SQL
 %define	pnam	Translator
 Summary:	SQL::Translator - manipulate structure data definitions (database schemas)
-#Summary(pl):	
+Summary(pl):	SQL::Translator - manipulowanie definicjami struktur danych (schematami baz danych)
 Name:		perl-SQL-Translator
 Version:	0.06
 Release:	1
@@ -28,14 +28,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 SQL::Translator is a group of Perl modules that manipulate structure
-data definitions (mostly database schemas) in interesting ways,
-such as converting among different dialects of CREATE syntax (e.g.,
-MySQL-to-Oracle), visualizations of schemas (pseudo-ER diagrams GraphViz
-or GD), automatic code generation (using Class::DBI), converting non-RDBMS
-files to SQL schemas (xSV text files, Excel spreadsheets), serializing
-parsed schemas (via Storable, YAML and XML), creating documentation
-(HTML and POD), and more.  We also have the ability to talk directly to
-a database through DBI to query for the structures of several databases.
+data definitions (mostly database schemas) in interesting ways, such
+as converting among different dialects of CREATE syntax (e.g.,
+MySQL-to-Oracle), visualizations of schemas (pseudo-ER diagrams
+GraphViz or GD), automatic code generation (using Class::DBI),
+converting non-RDBMS files to SQL schemas (xSV text files, Excel
+spreadsheets), serializing parsed schemas (via Storable, YAML and
+XML), creating documentation (HTML and POD), and more. We also have
+the ability to talk directly to a database through DBI to query for
+the structures of several databases.
 
 # %description -l pl
 # TODO
