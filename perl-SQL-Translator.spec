@@ -16,12 +16,22 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	e7aae659a682ddbb46bbd6b2c15a4b6e
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	perl-Module-Build
 %if %{with tests}
 BuildRequires:	perl-Class-Base
 BuildRequires:	perl-Parse-RecDescent >= 1.94
 BuildRequires:	perl-Pod-Parser
 BuildRequires:	perl-Template-Toolkit >= 2.1
 BuildRequires:	perl-Text-RecordParser
+BuildRequires:	perl-XML-Writer
+BuildRequires:	perl-Spreadsheet-ParseExcel
+BuildRequires:	perl-GD
+BuildRequires:	perl-Test-Exception
+BuildRequires:	perl-Test-Differences
+BuildRequires:	perl-YAML
+BuildRequires:	perl-GraphViz
+BuildRequires:	perl-XML-XPath
+BuildRequires:	perl-DBI
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
