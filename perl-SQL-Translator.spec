@@ -8,30 +8,35 @@
 Summary:	SQL::Translator - manipulate structure data definitions (database schemas)
 Summary(pl):	SQL::Translator - manipulowanie definicjami struktur danych (schematami baz danych)
 Name:		perl-SQL-Translator
-Version:	0.06
+Version:	0.07
 Release:	1
 License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e7aae659a682ddbb46bbd6b2c15a4b6e
+# Source0-md5:	5e6d8be5f6256343125a130a57a3e463
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-Module-Build
 %if %{with tests}
 BuildRequires:	perl-Class-Base
+BuildRequires:	perl-Class-Data-Inheritable >= 0.02
+BuildRequires:	perl-Class-MakeMethods
 BuildRequires:	perl-DBI
 BuildRequires:	perl-GD
 BuildRequires:	perl-GraphViz
+BuildRequires:	perl-Log-Log4perl
 BuildRequires:	perl-Parse-RecDescent >= 1.94
 BuildRequires:	perl-Pod-Parser
-BuildRequires:	perl-Spreadsheet-ParseExcel
-BuildRequires:	perl-Template-Toolkit >= 2.1
+BuildRequires:	perl-Spreadsheet-ParseExcel >= 0.2602
+BuildRequires:	perl-Template-Toolkit >= 2.10
+BuildRequires:	perl-Template-Toolkit-Plugin-Date
 BuildRequires:	perl-Test-Differences
 BuildRequires:	perl-Test-Exception
-BuildRequires:	perl-Text-RecordParser
-BuildRequires:	perl-XML-Writer
-BuildRequires:	perl-XML-XPath
-BuildRequires:	perl-YAML
+BuildRequires:	perl-Test-Simple >= 0.60
+BuildRequires:	perl-Text-RecordParser >= 0.02
+BuildRequires:	perl-XML-Writer >= 0.500
+BuildRequires:	perl-XML-XPath >= 1.13
+BuildRequires:	perl-YAML >= 0.39
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
