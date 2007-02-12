@@ -6,7 +6,7 @@
 %define	pdir	SQL
 %define	pnam	Translator
 Summary:	SQL::Translator - manipulate structure data definitions (database schemas)
-Summary(pl):	SQL::Translator - manipulowanie definicjami struktur danych (schematami baz danych)
+Summary(pl.UTF-8):   SQL::Translator - manipulowanie definicjami struktur danych (schematami baz danych)
 Name:		perl-SQL-Translator
 Version:	0.07
 Release:	1
@@ -53,17 +53,17 @@ XML), creating documentation (HTML and POD), and more. We also have
 the ability to talk directly to a database through DBI to query for
 the structures of several databases.
 
-%description -l pl
-SQL::Translator to grupa modu³ów Perla obrabiaj±cych definicje danych
-struktur (g³ównie schematów baz danych) na ciekawe sposoby, takie jak
-konwersja miêdzy ró¿nymi dialektami sk³adni CREATE (np. MySQL do
-Oracle), wizualizacja schematów (diagramy pseudo-ER, GraphViz i
-GD), automatyczne generowanie kodu (przy u¿yciu Class::DBI), konwersja
-plików nie bêd±cych relacyjnymi bazami danych do schematów SQL (pliki
-tekstowe xSV, arkusze Excela), serializacja przetworzonych schematów
+%description -l pl.UTF-8
+SQL::Translator to grupa moduÅ‚Ã³w Perla obrabiajÄ…cych definicje danych
+struktur (gÅ‚Ã³wnie schematÃ³w baz danych) na ciekawe sposoby, takie jak
+konwersja miÄ™dzy rÃ³Å¼nymi dialektami skÅ‚adni CREATE (np. MySQL do
+Oracle), wizualizacja schematÃ³w (diagramy pseudo-ER, GraphViz i
+GD), automatyczne generowanie kodu (przy uÅ¼yciu Class::DBI), konwersja
+plikÃ³w nie bÄ™dÄ…cych relacyjnymi bazami danych do schematÃ³w SQL (pliki
+tekstowe xSV, arkusze Excela), serializacja przetworzonych schematÃ³w
 (poprzez Storable, YAML i XML), tworzenie dokumentacji (HTML i POD)
-itd. Istnieje tak¿e mo¿liwo¶æ bezpo¶redniej komunikacji z baz± danych
-poprzez DBI w celu odpytania o struktury ró¿nych baz.
+itd. Istnieje takÅ¼e moÅ¼liwoÅ›Ä‡ bezpoÅ›redniej komunikacji z bazÄ… danych
+poprzez DBI w celu odpytania o struktury rÃ³Å¼nych baz.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
