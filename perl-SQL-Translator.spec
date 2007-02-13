@@ -6,7 +6,7 @@
 %define	pdir	SQL
 %define	pnam	Translator
 Summary:	SQL::Translator - manipulate structure data definitions (database schemas)
-Summary(pl.UTF-8):   SQL::Translator - manipulowanie definicjami struktur danych (schematami baz danych)
+Summary(pl.UTF-8):	SQL::Translator - manipulowanie definicjami struktur danych (schematami baz danych)
 Name:		perl-SQL-Translator
 Version:	0.07
 Release:	1
