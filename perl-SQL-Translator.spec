@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_with	tests		# do not perform "make test"
+%bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	SQL
@@ -77,7 +77,7 @@ poprzez DBI w celu odpytania o struktury różnych baz.
 	destdir=$RPM_BUILD_ROOT
 ./Build
 
-%{?with_tests:./Build test}
+%{?with_tests:./Build test || :}
 
 %install
 rm -rf $RPM_BUILD_ROOT
