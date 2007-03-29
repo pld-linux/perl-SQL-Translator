@@ -9,7 +9,7 @@ Summary:	SQL::Translator - manipulate structure data definitions (database schem
 Summary(pl.UTF-8):	SQL::Translator - manipulowanie definicjami struktur danych (schematami baz danych)
 Name:		perl-SQL-Translator
 Version:	0.08
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -93,5 +93,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/SQL/*.pm
 %{perl_vendorlib}/SQL/Translator
-%{perl_vendorlib}/Test/SQL/*.pm
+%{perl_vendorlib}/Test/SQL
 %{_mandir}/man?/*
