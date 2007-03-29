@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_with	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	SQL
@@ -8,12 +8,12 @@
 Summary:	SQL::Translator - manipulate structure data definitions (database schemas)
 Summary(pl.UTF-8):	SQL::Translator - manipulowanie definicjami struktur danych (schematami baz danych)
 Name:		perl-SQL-Translator
-Version:	0.07
+Version:	0.08
 Release:	1
 License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5e6d8be5f6256343125a130a57a3e463
+# Source0-md5:	f152f9a0d443c2083dc19b054dd79266
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-Module-Build
@@ -40,6 +40,9 @@ BuildRequires:	perl-YAML >= 0.39
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# stupid rpm... should invoke perl.req for all files at once
+%define		_noautoreq	'perl(SQL::Translator.*)'
 
 %description
 SQL::Translator is a group of Perl modules that manipulate structure
@@ -86,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS BUGS Changes README TODO *.rdf
+%doc AUTHORS BUGS Changes README
 %attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/SQL/*.pm
 %{perl_vendorlib}/SQL/Translator
