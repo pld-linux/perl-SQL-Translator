@@ -12,11 +12,12 @@ Version:	0.08
 Release:	2
 License:	GPL v2
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/SQL/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f152f9a0d443c2083dc19b054dd79266
+URL:		http://search.cpan.org/dist/SQL-Translator/
+BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-Module-Build
 %if %{with tests}
 BuildRequires:	perl-Class-Base
 BuildRequires:	perl-Class-Data-Inheritable >= 0.02
