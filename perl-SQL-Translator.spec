@@ -8,17 +8,18 @@
 Summary:	SQL::Translator - manipulate structure data definitions (database schemas)
 Summary(pl.UTF-8):	SQL::Translator - manipulowanie definicjami struktur danych (schematami baz danych)
 Name:		perl-SQL-Translator
-Version:	0.09002
+Version:	0.11002
 Release:	1
 License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/SQL/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b53c9f897a9415d6c48472d50b21cf50
+# Source0-md5:	72de264f0b2ffac5cc6dafd9be05fb77
 URL:		http://search.cpan.org/dist/SQL-Translator/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl(File::ShareDir) >= 1
 BuildRequires:	perl-Class-Base
 BuildRequires:	perl-Class-Data-Inheritable >= 0.02
 BuildRequires:	perl-Class-MakeMethods
@@ -26,7 +27,7 @@ BuildRequires:	perl-DBI
 BuildRequires:	perl-GD
 BuildRequires:	perl-GraphViz
 BuildRequires:	perl-Log-Log4perl
-BuildRequires:	perl-Parse-RecDescent >= 1.94
+BuildRequires:	perl-Parse-RecDescent >= 1.962.002
 BuildRequires:	perl-Pod-Parser
 BuildRequires:	perl-Spreadsheet-ParseExcel >= 0.2602
 BuildRequires:	perl-Template-Toolkit >= 2.10
@@ -73,17 +74,17 @@ poprzez DBI w celu odpytania o struktury różnych baz.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
+%{__perl} Makefile.PL \
 	installdirs=vendor \
 	destdir=$RPM_BUILD_ROOT
-./Build
+%{__make}
 
-%{?with_tests:./Build test || :}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
