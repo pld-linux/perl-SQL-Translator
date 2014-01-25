@@ -28,6 +28,7 @@ BuildRequires:	perl-GD
 BuildRequires:	perl-GraphViz
 BuildRequires:	perl-JSON
 BuildRequires:	perl-Log-Log4perl
+BuildRequires:	perl-Moo
 BuildRequires:	perl-Package-Variant >= 1.001001
 BuildRequires:	perl-Parse-RecDescent >= 1.967009
 BuildRequires:	perl-Pod-Parser
