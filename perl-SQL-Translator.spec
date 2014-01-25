@@ -19,15 +19,17 @@ BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl(File::ShareDir) >= 1
+BuildRequires:	perl-File-ShareDir >= 1.03
 BuildRequires:	perl-Class-Base
 BuildRequires:	perl-Class-Data-Inheritable >= 0.02
 BuildRequires:	perl-Class-MakeMethods
 BuildRequires:	perl-DBI
 BuildRequires:	perl-GD
 BuildRequires:	perl-GraphViz
+BuildRequires:	perl-JSON
 BuildRequires:	perl-Log-Log4perl
-BuildRequires:	perl-Parse-RecDescent >= 1.962.002
+BuildRequires:	perl-Package-Variant >= 1.001001
+BuildRequires:	perl-Parse-RecDescent >= 1.967009
 BuildRequires:	perl-Pod-Parser
 BuildRequires:	perl-Spreadsheet-ParseExcel >= 0.2602
 BuildRequires:	perl-Template-Toolkit >= 2.10
@@ -40,6 +42,7 @@ BuildRequires:	perl-XML-Writer >= 0.500
 BuildRequires:	perl-XML-XPath >= 1.13
 BuildRequires:	perl-YAML >= 0.39
 %endif
+Requires:	perl-File-ShareDir >= 1.03
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -62,8 +65,8 @@ the structures of several databases.
 SQL::Translator to grupa modułów Perla obrabiających definicje danych
 struktur (głównie schematów baz danych) na ciekawe sposoby, takie jak
 konwersja między różnymi dialektami składni CREATE (np. MySQL do
-Oracle), wizualizacja schematów (diagramy pseudo-ER, GraphViz i
-GD), automatyczne generowanie kodu (przy użyciu Class::DBI), konwersja
+Oracle), wizualizacja schematów (diagramy pseudo-ER, GraphViz i GD),
+automatyczne generowanie kodu (przy użyciu Class::DBI), konwersja
 plików nie będących relacyjnymi bazami danych do schematów SQL (pliki
 tekstowe xSV, arkusze Excela), serializacja przetworzonych schematów
 (poprzez Storable, YAML i XML), tworzenie dokumentacji (HTML i POD)
@@ -91,9 +94,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS BUGS Changes README
+%doc Changes README
 %attr(755,root,root) %{_bindir}/*
 %{perl_vendorlib}/SQL/*.pm
 %{perl_vendorlib}/SQL/Translator
 %{perl_vendorlib}/Test/SQL
+%{perl_vendorlib}/auto/share/dist/SQL-Translator
 %{_mandir}/man?/*
